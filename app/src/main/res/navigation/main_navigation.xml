@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mytrip.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_nav_home_to_expenseFragment"
+            app:destination="@id/expenseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_to_eventFragment"
+            app:destination="@id/eventFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_to_momentFragment"
+            app:destination="@id/momentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_to_locationFragment"
+            app:destination="@id/locationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.example.mytrip.ui.expense.ExpenseFragment"
+        android:label="Expense Tracker"
+        tools:layout="@layout/fragment_expense" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.mytrip.ui.events.EventFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_event">
+        <action
+            android:id="@+id/action_eventFragment_to_newEventFragment"
+            app:destination="@id/newEventFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newEventFragment"
+        android:name="com.example.mytrip.ui.events.NewEventFragment"
+        android:label="New Event"
+        tools:layout="@layout/fragment_new_event" />
+    <fragment
+        android:id="@+id/momentFragment"
+        android:name="com.example.mytrip.ui.moment.MomentFragment"
+        android:label="Travel Gallery"
+        tools:layout="@layout/fragment_moment">
+        <action
+            android:id="@+id/action_momentFragment_to_newMomentFragment"
+            app:destination="@id/newMomentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newMomentFragment"
+        android:name="com.example.mytrip.ui.moment.NewMomentFragment"
+        android:label="Add Moment"
+        tools:layout="@layout/fragment_new_moment" />
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.mytrip.ui.weather.WeatherFragment"
+        android:label="Current Weather"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.mytrip.ui.location.LocationFragment"
+        android:label="Current Location"
+        tools:layout="@layout/fragment_location" />
+
+</navigation>
